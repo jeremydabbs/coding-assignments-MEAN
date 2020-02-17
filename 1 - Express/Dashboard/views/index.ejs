@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mongoose Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to Mongoose Dashboard</h1>
+    <a href="/mongooses/new">Create an animal</a>
+    <% for(var a of allAnimals) { %>
+        <h2><a href="/mongooses/<%= a._id %>"><%= a.name %></a></h2>
+        <a href="/mongooses/destroy/<%= a._id %>">Destroy</a>
+    <% } %>
+</body>
+</html>
